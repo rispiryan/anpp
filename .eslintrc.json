@@ -1,0 +1,78 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:perfectionist/recommended-line-length"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "no-undef": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", {
+      "singleQuote": true,
+      "semi": true
+    }],
+
+    "perfectionist/sort-imports": [
+      "error",
+      {
+        "type": "line-length",
+        "order": "desc",
+        "groups": [
+          "react",
+          ["builtin", "external"],
+          "type",
+          "globalScss",
+          "side-effect",
+          "internal-type",
+          "internal",
+          "components",
+          "hooks",
+          "constants",
+          "utils",
+          "local",
+          ["parent-type", "sibling-type", "index-type"],
+          ["parent", "sibling", "index"],
+          "style",
+          "object",
+          "unknown"
+        ],
+        "custom-groups": {
+          "value": {
+            "react": ["react", "react-dom", "react-dom/client"],
+            "globalScss": "@/scss/**",
+            "components": "@/**/components/**",
+            "hooks": "@/**/hooks/**",
+            "constants": "@/**/constants/**",
+            "utils": "@/**/utils/**",
+            "local": "@/**"
+          },
+          "type": {
+            "react": "react"
+          }
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "perfectionist/sort-interfaces": [
+      "error",
+      {
+        "type": "line-length",
+        "order": "desc",
+        "optionality-order": "required-first"
+      }
+    ],
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "type": "line-length",
+        "order": "desc",
+        "groups": ["multiline", "unknown", "shorthand"]
+      }
+    ]
+  }
+}

@@ -3,10 +3,12 @@
     "next/core-web-vitals",
     "eslint:recommended",
     "plugin:prettier/recommended",
-    "plugin:perfectionist/recommended-line-length"
+    "plugin:perfectionist/recommended-line-length",
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
-    "prettier"
+    "prettier",
+    "@typescript-eslint"
   ],
   "rules": {
     "no-undef": "off",

@@ -8,8 +8,8 @@ export default async function Post() {
       <div className={styles.layoutContent}>
         <main className={styles.container}>
           ANPP Main Page
-          <Link href={'/login'} scroll>
-            To Login
+          <Link href={'/news'} scroll>
+            To news
           </Link>
         </main>
       </div>

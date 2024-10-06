@@ -5,7 +5,7 @@ import { API_BASE_PATH } from '@/lib/consts';
 import getNews from '@/lib/getNews';
 
 export default async function Post() {
-  const data = await getNews();
+  const data: INews[] = await getNews();
 
   return (
     <>

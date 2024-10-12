@@ -1,12 +1,13 @@
 import Link from 'next/link';
 
-import styles from '@/app//news/page.module.scss';
+import styles from '@/app/[locale]/news/page.module.scss';
 import { API_BASE_PATH } from '@/lib/consts';
 import getNews from '@/lib/getNews';
 
 export default async function Post() {
   const data: INews[] = await getNews();
-
+  console.log(data, 'data');
+  console.log(API_BASE_PATH, 'API_BASE_PATH');
   return (
     <>
       <div className={styles.layoutContent}>

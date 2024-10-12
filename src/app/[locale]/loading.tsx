@@ -1,6 +1,6 @@
 import { Loader } from '@/app/components/Loader/Loader';
 
-import styles from '@/app/loading.module.scss';
+import styles from '@/app/[locale]/loading.module.scss';
 
 export default function Loading() {
   return (

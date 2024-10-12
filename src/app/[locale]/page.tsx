@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import styles from '@/app/page.module.scss';
+import styles from '@/app/[locale]/page.module.scss';
 
 export default async function Post() {
   return (
@@ -8,7 +8,7 @@ export default async function Post() {
       <div className={styles.layoutContent}>
         <main className={styles.container}>
           ANPP Main Page
-          <Link href={'/news'} scroll>
+          <Link href={'news'} scroll>
             To news
           </Link>
         </main>

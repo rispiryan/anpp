@@ -1,6 +1,21 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "tan masin"
-  }
+    "language": "Հայ",
+    "production": "Արտադրություն",
+    "history": "Պատմություն",
+    "contacts": "Կոնտակտներ",
+    "safety": "Անվտանգություն",
+    "About the station": "Կայանի մասին",
+    "news": "Նորություններ",
+    "cooperation": "Համագործակցություն",
+    "vacancies": "Թափուր Աշխատատեղեր",
+    "events": "Միջոցառումներ",
+    "shopping": "Գնումներ",
+    "education": "Ուսումնական նյութեր",
+    "report": "Հաշվետվություն",
+    "structure": "Կառուցվածք",
+    "Main products": "Հիմնական Արտադրամասեր",
+    "Reactor Factory": "Ռեակտորային Արտադրամաս",
+    "Turbine Factory": "Տուրբինային Արտադրամաս",
+    "Electrical Workshop": "Էլեկտրական Արտադրամաս",
+    "ZACH Factory": "ՋԱՉ Արտադրամաս"
 }

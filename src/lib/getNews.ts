@@ -1,7 +1,7 @@
 import { API_BASE_PATH } from '@/lib/consts';
 
 export default async function getNews() {
-  const response = await fetch(`http://localhost:8000/news`, {
+  const response = await fetch(`${API_BASE_PATH}/news`, {
     next: { revalidate: 60 },
   });
   const data = await response.json();

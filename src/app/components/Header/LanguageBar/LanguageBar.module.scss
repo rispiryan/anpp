@@ -1,0 +1,46 @@
+.languageBar{
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  .content{
+    display: flex;
+    align-items: center;
+  }
+  .arrow{
+    fill: var(--black);
+  }
+  .arrowUp{
+    transform: rotate(180deg);
+    box-sizing: border-box;
+    margin-top: -4px;
+
+  }
+  .language{
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  .list {
+    position: absolute;
+    inset-inline-end: 0;
+    top: 25px;
+    z-index: 9999;
+    list-style: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(19, 44, 68, 0.16);
+    border-radius: 6px;
+    min-width: 90px;
+    margin: 0;
+    padding: 8px 0;
+    .item{
+       padding: 4px 8px;
+      cursor: pointer;
+      &:hover{
+        background: var(--blue-light);
+        color: var(--white);
+      }
+    }
+  }
+}

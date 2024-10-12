@@ -1,6 +1,22 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "doma kruto"
-  }
+  "language": "Рус",
+  "production": "Производство",
+  "history": "История",
+  "contacts": "Контакты",
+  "safety": "Безопасность",
+  "About the station": "О станции",
+  "news": "Новости",
+  "cooperation": "Сотрудничество",
+  "vacancies": "Вакантные вакансии",
+  "events": "События",
+  "shopping": "Покупки",
+  "education": "Учебные материалы",
+  "report": "Отчет",
+  "structure": "Структура",
+  "Main products": "Основная продукция",
+  "Reactor Factory": "Реакторный завод",
+  "Turbine Factory": "Турбинный завод",
+  "Electrical Workshop": "Электротехническая мастерская",
+  "ZACH Factory": " ЯХ Завод"
+
 }

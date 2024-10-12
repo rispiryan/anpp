@@ -1,3 +1,16 @@
 .container {
-  color: var(--blue)
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 120px;
+  height: 94px;
+}
+
+.header{
+  border-bottom: 1px solid #E5E5E5;
+  .logo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
 }

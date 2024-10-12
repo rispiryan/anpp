@@ -1,0 +1,101 @@
+'use client';
+
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
+import cn from 'classnames';
+
+import { routes } from '@/constants/routes';
+
+import Arrow from '@/assets/icons/arrow.svg';
+
+import styles from './NavBar.module.scss';
+
+const menu = [
+  { to: routes.production, title: 'production' },
+  { to: routes.safety, title: 'safety' },
+  { to: routes.history, title: 'history' },
+  {
+    menu: [
+      { to: routes.news, title: 'news' },
+      { to: routes.cooperation, title: 'cooperation' },
+      { to: routes.vacancies, title: 'vacancies' },
+      { to: routes.events, title: 'events' },
+      { to: routes.shopping, title: 'shopping' },
+      { to: routes.education, title: 'education' },
+      { to: routes.report, title: 'report' },
+      { to: routes.structure, title: 'structure' },
+      {
+        menu: [
+          { to: routes.reactorFactory, title: 'Reactor Factory' },
+          { to: routes.turbineFactory, title: 'Turbine Factory' },
+          { to: routes.electricalWorkshop, title: 'Electrical Workshop' },
+          { to: routes.zachFactory, title: 'ZACH Factory' },
+        ],
+        title: 'Main products',
+      },
+    ],
+    title: 'About the station',
+  },
+  { to: routes.contacts, title: 'contacts' },
+];
+
+const NavBar = () => {
+  const router = useRouter();
+  const t = useTranslations();
+  const locale = useLocale();
+  const navigate = (to: undefined | string) => {
+    if (to) {
+      router.push(`/${locale}/${to}`);
+    }
+  };
+  return (
+    <nav className={styles.navBar}>
+      {menu.map((el) => {
+        return (
+          <div className={styles.wrap} key={el.title}>
+            <ul>
+              <li onClick={() => navigate(el.to)} className={styles.title}>
+                {t(el.title)}
+                {el?.menu && <Arrow className={cn(styles.arrow)} />}
+              </li>
+            </ul>
+            {el?.menu && (
+              <div className={cn(styles.secondTab)}>
+                {el.menu.map((tab) => {
+                  return (
+                    <div className={styles.lastSection} key={tab.title}>
+                      <li
+                        onClick={() => navigate(tab.to)}
+                        className={styles.tab}
+                      >
+                        {t(tab.title)}
+                        {tab?.menu && <Arrow className={cn(styles.subArrow)} />}
+                      </li>
+                      {tab?.menu && (
+                        <div className={styles.lastTab}>
+                          <div className={styles.content}>
+                            {tab?.menu.map((last) => (
+                              <li
+                                onClick={() => navigate(last.to)}
+                                className={styles.lastTitle}
+                                key={last.title}
+                              >
+                                {t(last.title)}
+                              </li>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </nav>
+  );
+};
+
+export default NavBar;

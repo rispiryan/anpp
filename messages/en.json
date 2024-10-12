@@ -1,6 +1,21 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  }
+  "language": "Eng",
+  "production": "Production",
+  "history": "History",
+  "contacts": "Contacts",
+  "safety": "Safety",
+  "About the station": "About the station",
+  "news": "News",
+  "cooperation": "Cooperation",
+  "vacancies": "Vacant Jobs",
+  "events": "Events",
+  "shopping": "Shopping",
+  "education": "Education",
+  "report": "Report",
+  "structure": "Structure",
+  "Main products": "Main products",
+  "Reactor Factory": "Reactor Factory",
+  "Turbine Factory": "Turbine Factory",
+  "Electrical Workshop": "Electrical Workshop",
+  "ZACH Factory": "JACH Factory"
 }

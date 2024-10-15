@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 
 import LanguageBar from '@/app/components/Header/LanguageBar';

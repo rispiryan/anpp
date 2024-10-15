@@ -1,7 +1,7 @@
 import Breadcrumb from '@/app/components/Breadcrumb/Breadcrumb';
 
 import News from '@/app/[locale]/news/News';
-import getNews from '@/lib/getNews';
+import getNews from '@/lib/news/getNews';
 
 export default async function Post() {
   const data: INews[] = await getNews();

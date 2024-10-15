@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 
 import SingleNews from '@/app/[locale]/news/[slug]/SingleNews';
-import getSingleNews from '@/lib/getSingleNews';
-import getNews from '@/lib/getNews';
+import getSingleNews from '@/lib/news/getSingleNews';
+import getNews from '@/lib/news/getNews';
 
 export async function generateMetadata({
   params: { eachNews, slug },

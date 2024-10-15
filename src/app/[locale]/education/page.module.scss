@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.layoutContent {
+  display: flex;
+  max-width: 1180px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.education{
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}

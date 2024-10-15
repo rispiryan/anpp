@@ -15,7 +15,6 @@ interface INewsCard {
 
 const NewsCard = ({ news }: INewsCard) => {
   const locale = useLocale();
-
   const data = dataAdapter(news, locale);
   return (
     <div className={styles.newsCard}>

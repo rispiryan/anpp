@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
+import SingleNews from '@/app/[locale]/news/[slug]/SingleNews';
 import getSingleNews from '@/lib/getSingleNews';
 import { API_BASE_PATH } from '@/lib/consts';
 import getNews from '@/lib/getNews';
@@ -44,22 +45,23 @@ export default async function Post({
 
   return (
     <>
-      <div className={styles.layoutContent}>
-        <main className={styles.container}>
-          <Link href="/news">back to news</Link>
+      <SingleNews news={data} />
+      {/*<div className={styles.layoutContent}>*/}
+      {/*  <main className={styles.container}>*/}
+      {/*    <Link href="/news">back to news</Link>*/}
 
-          <h2>{data.ar_title}</h2>
-          <h3>{data.ar_description}</h3>
-          <img
-            style={{
-              backgroundSize: 'cover',
-              maxHeight: '300px',
-              maxWidth: '300px',
-            }}
-            src={`${API_BASE_PATH}/${data.image}`}
-          />
-        </main>
-      </div>
+      {/*    <h2>{data.ar_title}</h2>*/}
+      {/*    <h3>{data.ar_description}</h3>*/}
+      {/*    <img*/}
+      {/*      style={{*/}
+      {/*        backgroundSize: 'cover',*/}
+      {/*        maxHeight: '300px',*/}
+      {/*        maxWidth: '300px',*/}
+      {/*      }}*/}
+      {/*      src={`${API_BASE_PATH}/${data.image}`}*/}
+      {/*    />*/}
+      {/*  </main>*/}
+      {/*</div>*/}
     </>
   );
 }

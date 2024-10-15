@@ -5,7 +5,7 @@ import styles from '@/app/[locale]/page.module.scss';
 export default async function Post() {
   return (
     <>
-      <div className={styles.layoutContent}>
+      <div>
         <main className={styles.container}>
           ANPP Main Page
           <Link href={'news'} scroll>

@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 import { useTranslations, useLocale } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import cn from 'classnames';
@@ -43,27 +45,37 @@ const NavBar = () => {
   const router = useRouter();
   const t = useTranslations();
   const locale = useLocale();
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const navigate = (to: undefined | string) => {
     if (to) {
       router.push(`/${locale}/${to}`);
+      setActiveMenu(null);
     }
   };
   return (
     <nav className={styles.navBar}>
       {menu.map((el) => {
         return (
-          <div className={styles.wrap} key={el.title}>
+          <div
+            onMouseEnter={() => setActiveMenu(el.title)}
+            className={styles.wrap}
+            key={el.title}
+          >
             <ul>
               <li onClick={() => navigate(el.to)} className={styles.title}>
                 {t(el.title)}
                 {el?.menu && <Arrow className={cn(styles.arrow)} />}
               </li>
             </ul>
-            {el?.menu && (
+            {!!activeMenu && el?.menu && (
               <div className={cn(styles.secondTab)}>
                 {el.menu.map((tab) => {
                   return (
-                    <div className={styles.lastSection} key={tab.title}>
+                    <div
+                      onMouseEnter={() => setActiveMenu(el.title)}
+                      className={styles.lastSection}
+                      key={tab.title}
+                    >
                       <li
                         onClick={() => navigate(tab.to)}
                         className={styles.tab}

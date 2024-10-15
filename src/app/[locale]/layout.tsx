@@ -37,7 +37,7 @@ export default async function Layout({
           <div className={styles.main}>
             <Suspense fallback={<Loader />}>
               <Header />
-              {children}
+              <div className={styles.content}>{children}</div>
               <Footer />
               <ScrollToTop />
             </Suspense>

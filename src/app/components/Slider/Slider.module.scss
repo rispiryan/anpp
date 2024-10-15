@@ -1,0 +1,15 @@
+.slider {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  img{
+    height: 350px;
+  }
+}
+
+.slider :global(.image-gallery-thumbnails) {
+  width: 100%;
+  overflow: auto !important;
+  position: absolute;
+  max-height: 400px;
+}

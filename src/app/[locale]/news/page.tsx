@@ -9,7 +9,7 @@ export default async function Post() {
   return (
     <>
       <Breadcrumb crumbLabel={'Station News'} />
-      <News news={data} />
+      <News news={data || []} />
     </>
   );
 }

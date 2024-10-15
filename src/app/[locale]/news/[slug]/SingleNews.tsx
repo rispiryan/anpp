@@ -7,8 +7,10 @@ import Slider from '@/app/components/Slider';
 
 import { routes } from '@/constants/routes';
 
-import { dataAdapter } from '@/app/[locale]/news/dataAdapter';
+import { newsDataAdapter } from '@/lib/utils/newsDataAdapter';
+
 import { API_BASE_PATH } from '@/lib/consts';
+import { TLocale } from '@/@types/locale';
 
 import styles from './page.module.scss';
 
@@ -16,10 +18,11 @@ interface ISingleNews {
   news: INews;
 }
 
+// TODO Move this component to components directory
 const SingleNews = ({ news }: ISingleNews) => {
-  const locale = useLocale();
+  const locale = useLocale() as TLocale;
   const t = useTranslations();
-  const data = dataAdapter(news, locale);
+  const data = newsDataAdapter(news, locale);
   const {
     contentImages1,
     contentImages2,

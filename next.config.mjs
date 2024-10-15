@@ -2,6 +2,8 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
+// TODO fix favicon
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     trailingSlash: true,

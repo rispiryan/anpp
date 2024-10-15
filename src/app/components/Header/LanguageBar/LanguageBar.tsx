@@ -15,6 +15,8 @@ import Arrow from '@/assets/icons/arrow.svg';
 
 import styles from './LanguageBar.module.scss';
 
+// TODO language flag does not match with design
+// TODO options also should has flags
 const LanguageBar = () => {
   const t = useTranslations();
   const locale = useLocale();

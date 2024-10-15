@@ -23,7 +23,6 @@ const SingleNews = ({ news }: ISingleNews) => {
   const locale = useLocale() as TLocale;
   const t = useTranslations();
   const data = newsDataAdapter(news, locale);
-  console.log(locale, 'localelocalelocalelocale');
   const {
     contentImages1,
     contentImages2,

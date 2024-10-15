@@ -2,20 +2,13 @@ import createMiddleware from 'next-intl/middleware';
 
 import { routing } from './i18n/routing';
 
-export default createMiddleware(routing);
+export default createMiddleware(routing, {
+  localeDetection: false,
+});
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ['/', '/(ar|en|ru)/:path*'],
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|images/books|icons|manifest).*)',
+  ],
 };
-
-// import createIntlMiddleware from 'next-intl/middleware';
-//
-// export default createIntlMiddleware({
-//   locales: ['ar', 'en', 'ru'], // Add your supported locales
-//   defaultLocale: 'ar',
-// });
-//
-// export const config = {
-//   matcher: ['/((?!api|_next|.*\\..*).*)'], // Adjust the paths where the middleware should run
-// };

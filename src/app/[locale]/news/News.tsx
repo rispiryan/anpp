@@ -7,8 +7,10 @@ interface INewsProps {
   news: INews[];
 }
 
+// TODO Move this component to components directory
 const News = ({ news }: INewsProps) => {
   const t = useTranslations();
+
   return (
     <div className={styles.news}>
       <p className={styles.title}>{t('Station News')}</p>

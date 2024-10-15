@@ -5,6 +5,7 @@ export const routing = defineRouting({
   // A list of all locales that are supported
   locales: ['ar', 'en', 'ru'],
 
+  // TODO default locale does not work
   // Used when no [locale] matches
   defaultLocale: 'ar',
 });

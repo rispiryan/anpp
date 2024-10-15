@@ -1,18 +1,20 @@
-.newsCard{
+.newsCard {
   height: 409px;
-  .img{
+  cursor: pointer;
+  text-decoration: none;
+  .img {
     object-fit: contain;
     height: 236px;
     width: 100%;
   }
 
-  .date{
+  .date {
     font-size: 14px;
     margin-bottom: 8px;
     margin-top: 12px;
   }
 
-  .title{
+  .title {
     color: var(--blue);
     margin-bottom: 12px;
     display: -webkit-box;
@@ -20,11 +22,16 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-decoration: none;
   }
-  a{
-    color: var(--blue);
+
+  &:hover {
+    .title {
+      text-decoration: underline;
+    }
   }
-  .description{
+
+  .description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;

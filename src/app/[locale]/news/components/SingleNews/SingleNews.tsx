@@ -12,13 +12,12 @@ import { newsDataAdapter } from '@/lib/utils/newsDataAdapter';
 import { API_BASE_PATH } from '@/lib/consts';
 import { TLocale } from '@/@types/locale';
 
-import styles from './page.module.scss';
+import styles from './SingleNews.module.scss';
 
 interface ISingleNews {
   news: INews;
 }
 
-// TODO Move this component to components directory
 const SingleNews = ({ news }: ISingleNews) => {
   const locale = useLocale() as TLocale;
   const t = useTranslations();

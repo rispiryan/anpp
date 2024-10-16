@@ -1,3 +1,4 @@
+import Education from '@/app/[locale]/education/components/Education';
 import Breadcrumb from '@/app/components/Breadcrumb/Breadcrumb';
 
 import getEducation from '@/lib/education/getEducation';
@@ -8,6 +9,7 @@ export default async function Post() {
   return (
     <>
       <Breadcrumb crumbLabel={'education'} />
+      <Education education={data} />
     </>
   );
 }

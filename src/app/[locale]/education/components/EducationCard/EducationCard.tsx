@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 import { routes } from '@/constants/routes';
 
-import { dataAdapter } from '@/app/[locale]/education/dataAdapter';
+import { educationDataAdapter } from '@/lib/utils/educationDataAdapter';
+
 import { API_BASE_PATH } from '@/lib/consts';
 import { formatDate } from '@/app/utils';
 
@@ -15,7 +16,7 @@ interface IEducationCard {
 
 const EducationCard = ({ education }: IEducationCard) => {
   const locale = useLocale();
-  const data = dataAdapter(education, locale);
+  const data = educationDataAdapter(education, locale);
   return (
     <div className={styles.educationCard}>
       <img

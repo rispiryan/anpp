@@ -1,4 +1,4 @@
-export const dataAdapter = (education: IEducation, ln: string) => {
+export const educationDataAdapter = (education: IEducation, ln: string) => {
   switch (ln) {
     case 'en': {
       return {

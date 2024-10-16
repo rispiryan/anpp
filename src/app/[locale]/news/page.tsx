@@ -1,6 +1,6 @@
 import Breadcrumb from '@/app/components/Breadcrumb/Breadcrumb';
+import News from '@/app/[locale]/news/components/News';
 
-import News from '@/app/[locale]/news/News';
 import getNews from '@/lib/news/getNews';
 
 export default async function Post() {

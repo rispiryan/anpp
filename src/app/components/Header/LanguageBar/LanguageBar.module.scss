@@ -6,6 +6,7 @@
   .content{
     display: flex;
     align-items: center;
+
   }
   .arrow{
     fill: var(--black);
@@ -37,10 +38,20 @@
     .item{
        padding: 4px 8px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 16px;
       &:hover{
         background: var(--blue-light);
         color: var(--white);
       }
     }
+  }
+}
+
+.flagWrap{
+  .flag{
+    width: 18px;
+    height: 18px;
   }
 }

@@ -2,18 +2,18 @@ import { useTranslations } from 'next-intl';
 
 import NewsCard from '@/app/[locale]/news/components/NewsCard/NewsCard';
 
-import styles from './page.module.scss';
-interface IEducationProps {
-  education: IEducation[];
+import styles from './News.module.scss';
+interface INewsProps {
+  news: INews[];
 }
-
-const Education = ({ education }: IEducationProps) => {
+const News = ({ news }: INewsProps) => {
   const t = useTranslations();
+
   return (
     <div className={styles.news}>
       <p className={styles.title}>{t('Station News')}</p>
       <div className={styles.grid}>
-        {education.map((el) => (
+        {news.map((el) => (
           <NewsCard key={el.id} news={el} />
         ))}
       </div>
@@ -21,4 +21,4 @@ const Education = ({ education }: IEducationProps) => {
   );
 };
 
-export default Education;
+export default News;

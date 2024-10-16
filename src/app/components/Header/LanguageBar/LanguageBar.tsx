@@ -3,7 +3,7 @@
 import { useState, useRef } from 'react';
 
 import { useTranslations, useLocale } from 'next-intl';
-import ReactCountryFlag from 'react-country-flag';
+import { CircleFlag } from 'react-circle-flags';
 import { useRouter } from 'next/navigation';
 import cn from 'classnames';
 
@@ -15,8 +15,6 @@ import Arrow from '@/assets/icons/arrow.svg';
 
 import styles from './LanguageBar.module.scss';
 
-// TODO language flag does not match with design
-// TODO options also should has flags
 const LanguageBar = () => {
   const t = useTranslations();
   const locale = useLocale();
@@ -32,12 +30,12 @@ const LanguageBar = () => {
 
   const flag = (ln: string) => {
     if (ln === 'ar') {
-      return 'AM';
+      return 'am';
     }
     if (ln === 'en') {
-      return 'US';
+      return 'us';
     }
-    return ln.toUpperCase();
+    return ln;
   };
   useOutsideClick(refContainer, () => setIsDropDownOpened(false));
   return (
@@ -46,7 +44,9 @@ const LanguageBar = () => {
         onClick={() => setIsDropDownOpened(!isDropDownOpened)}
         className={styles.content}
       >
-        <ReactCountryFlag countryCode={flag(locale)} />
+        <div className={styles.flagWrap}>
+          <CircleFlag countryCode={flag(locale)} className={styles.flag} />
+        </div>
         <p className={styles.language}>{t('language')}</p>
         <Arrow
           className={cn(styles.arrow, {
@@ -65,6 +65,12 @@ const LanguageBar = () => {
                 className={cn(styles.item)}
                 key={l.value}
               >
+                <div className={styles.flagWrap}>
+                  <CircleFlag
+                    countryCode={flag(l.value)}
+                    className={styles.flag}
+                  />
+                </div>
                 {l.title}
               </div>
             ))}

@@ -1,6 +1,6 @@
 // import { notFound } from 'next/navigation';
 //
-// import SingleNews from '@/app/[locale]/news/[slug]/SingleNews';
+// import SingleEducation from '@/app/[locale]/news/[slug]/SingleEducation';
 // import getSingleNews from '@/lib/news/getSingleNews';
 // import getNews from '@/lib/news/getNews';
 //
@@ -39,7 +39,7 @@
 //     notFound();
 //   }
 //
-//   return <SingleNews news={data} />;
+//   return <SingleEducation news={data} />;
 // }
 //
 // export const revalidate = 60;
@@ -55,7 +55,8 @@
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
-import SingleNews from '@/app/[locale]/news/[slug]/SingleNews';
+import SingleNews from '@/app/[locale]/news/components/SingleNews/SingleNews';
+
 import getSingleNews from '@/lib/news/getSingleNews';
 import getNews from '@/lib/news/getNews';
 
@@ -64,7 +65,7 @@ export async function generateMetadata({
 }: {
   params: { eachNews: INews; locale: string; slug: string };
 }) {
-  unstable_setRequestLocale(locale); // Ensure static rendering for this locale
+  unstable_setRequestLocale(locale);
 
   let data = eachNews;
   if (!eachNews) {

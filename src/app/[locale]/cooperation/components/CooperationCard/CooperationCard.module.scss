@@ -1,0 +1,24 @@
+.cooperationCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  .img {
+    object-fit: cover;
+    height: 130px;
+    width: 130px;
+    object-position: center;
+  }
+
+  .title {
+    color: var(--black);
+    font-weight: 700;
+    padding: 8px 0;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  .link{
+    color: var(--black);
+  }
+}

@@ -16,6 +16,7 @@
 
   .wrap{
     position: relative;
+    line-height: 24px;
     .secondTab{
       display: none;
       padding: 8px 0;
@@ -69,12 +70,12 @@
     position: relative;
     .lastTab{
       display: none;
-      width: 270px;
-      right: -270px;
+      width: 280px;
+      right: -280px;
       top:0;
       position: absolute;
       .content{
-        width: 270px;
+        width: 280px;
         border: 1px solid #EAEBF0;
         box-shadow: 0 4px 8px 0 #0000000A;
         margin-left: 5px;

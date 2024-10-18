@@ -18,6 +18,8 @@
   --black: #1E1F24;
   --gray: #62636C;
   --text: #6E6E6E;
+  --content: #2E2E2E;
+
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -65,6 +67,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
+  font-weight: 500;
 }
 .MuiPaper-root{
   box-shadow: none!important;

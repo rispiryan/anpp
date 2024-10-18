@@ -3,9 +3,11 @@
   cursor: pointer;
   text-decoration: none;
   .img {
-    object-fit: contain;
+    object-fit: cover;
     height: 236px;
+    object-position: center;
     width: 100%;
+    min-width: 200px;
   }
 
   .date {

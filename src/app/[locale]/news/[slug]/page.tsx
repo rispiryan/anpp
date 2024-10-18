@@ -2,7 +2,7 @@
 //
 // import SingleEducation from '@/app/[locale]/news/[slug]/SingleEducation';
 // import getSingleNews from '@/lib/news/getSingleNews';
-// import getNews from '@/lib/news/getNews';
+// import getShopping from '@/lib/news/getShopping';
 //
 // export async function generateMetadata({
 //   params: { eachNews, slug },
@@ -45,7 +45,7 @@
 // export const revalidate = 60;
 //
 // export async function generateStaticParams() {
-//   const posts: INews[] = await getNews();
+//   const posts: INews[] = await getShopping();
 //
 //   return posts.map((post) => ({
 //     eachNews: post,

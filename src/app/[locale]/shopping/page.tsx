@@ -1,18 +1,18 @@
+import Shopping from '@/app/[locale]/shopping/components/Shopping';
 import Breadcrumb from '@/app/components/Breadcrumb/Breadcrumb';
-import Events from '@/app/[locale]/events/components/Events';
 import News from '@/app/[locale]/news/components/News';
 
-import getEvents from '@/lib/events/getEvents';
+import getShopping from '@/lib/shopping/getShopping';
 import getNews from '@/lib/news/getNews';
 
 export default async function Post() {
-  const events: IEvents[] = await getEvents();
+  const shopping: IShopping[] = await getShopping();
   const news: INews[] = await getNews(6);
 
   return (
     <>
-      <Breadcrumb crumbLabel={'events'} />
-      <Events events={events} />
+      <Breadcrumb crumbLabel={'shopping'} />
+      <Shopping shopping={shopping} />
       <News news={news || []} />
     </>
   );

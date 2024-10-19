@@ -1,4 +1,14 @@
 {
+  "contact": {
+    "address": "Armavir , 0910, Mecamor",
+    "phone": "Phone/Fax: (+374 10) 28 06 69, (+374 10) 28 85 80,",
+    "info": "2015-2024, All rights reserved",
+    "operator": "Operator - (+374 10) 739 830",
+    "email": "anpp@anpp.am, anpp@haek.am"
+  },
+
+  "email": "Email",
+  "address": "Address",
   "language": "Eng",
   "production": "Production",
   "history": "History",

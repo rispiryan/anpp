@@ -99,6 +99,15 @@
       display: flex;
     }
   }
+}
 
-
+.home{
+  .wrap{
+    .arrow{
+      fill: var(--white);
+    }
+    .title{
+      color: var(--white)
+    }
+  }
 }

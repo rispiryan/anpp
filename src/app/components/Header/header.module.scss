@@ -11,9 +11,14 @@
 
 .header{
   border-bottom: 1px solid #E5E5E5;
+  z-index: 1;
   .logo {
     width: 70px;
     height: 70px;
     cursor: pointer;
   }
+}
+
+.home{
+  backdrop-filter: blur(8px);
 }

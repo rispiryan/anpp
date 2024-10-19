@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import styles from '@/app/[locale]/page.module.scss';
 
 export default async function Post() {
@@ -7,10 +5,13 @@ export default async function Post() {
     <>
       <div>
         <main className={styles.container}>
-          ANPP Main Page
-          <Link href={'news'} scroll>
-            To news
-          </Link>
+          <div className={styles.wrap}>ss</div>
+          {/*<Image*/}
+          {/*  className={styles.image}*/}
+          {/*  layout="responsive"*/}
+          {/*  alt="description"*/}
+          {/*  src={img}*/}
+          {/*/>*/}
         </main>
       </div>
     </>

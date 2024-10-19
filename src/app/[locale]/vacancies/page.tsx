@@ -6,7 +6,7 @@ import getVacancies from '@/lib/vacancies/getVacancies';
 import getNews from '@/lib/news/getNews';
 
 export default async function Post() {
-  const vacancies: IVacancies[] = await getVacancies();
+  const vacancies: IVacancy[] = await getVacancies();
   const news: INews[] = await getNews(6);
   console.log(vacancies, 23);
   return (

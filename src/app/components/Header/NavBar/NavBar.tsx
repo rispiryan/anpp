@@ -41,7 +41,11 @@ const menu = [
   { to: routes.contacts, title: 'contacts' },
 ];
 
-const NavBar = () => {
+interface INavBar {
+  isHome: boolean;
+}
+
+const NavBar = ({ isHome }: INavBar) => {
   const router = useRouter();
   const t = useTranslations();
   const locale = useLocale();
@@ -53,7 +57,7 @@ const NavBar = () => {
     }
   };
   return (
-    <nav className={styles.navBar}>
+    <nav className={cn(styles.navBar, { [styles.home]: isHome })}>
       {menu.map((el) => {
         return (
           <div

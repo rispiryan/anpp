@@ -1,14 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
 }
 
-//.layoutContent {
-//  display: flex;
-//  max-width: 1180px;
-//  padding: 0 20px;
-//  width: 100%;
-//  margin: 0 auto;
-//  flex-direction: column;
-//}
+.wrap{
+  position: absolute;
+  top:0;
+  width: 100%;
+  left: 0;
+  background-image: url("../../assets/images/frame.png");
+  height: 600px;
+}

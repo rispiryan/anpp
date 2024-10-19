@@ -15,7 +15,10 @@ import Arrow from '@/assets/icons/arrow.svg';
 
 import styles from './LanguageBar.module.scss';
 
-const LanguageBar = () => {
+interface ILanguageBar {
+  isHome: boolean;
+}
+const LanguageBar = ({ isHome }: ILanguageBar) => {
   const t = useTranslations();
   const locale = useLocale();
   const refContainer = useRef(null);
@@ -39,7 +42,10 @@ const LanguageBar = () => {
   };
   useOutsideClick(refContainer, () => setIsDropDownOpened(false));
   return (
-    <div className={styles.languageBar} ref={refContainer}>
+    <div
+      className={cn(styles.languageBar, { [styles.home]: isHome })}
+      ref={refContainer}
+    >
       <div
         onClick={() => setIsDropDownOpened(!isDropDownOpened)}
         className={styles.content}

@@ -1,0 +1,30 @@
+.reportsCard{
+  border: 1px solid var(--border);
+  padding: 24px;
+  .fileName{
+    padding: 16px 0 8px 0;
+    color: var(--content);
+  }
+
+  .date{
+     color: var(--text-light);
+     margin-bottom: 32px;
+    font-size: 12px;
+  }
+
+  .file{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    text-decoration: none;
+    font-size: 14px;
+    .size{
+      color: var(--text-light);
+    }
+    .download{
+      padding: 0 6px;
+    }
+  }
+}

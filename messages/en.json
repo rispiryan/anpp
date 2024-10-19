@@ -12,6 +12,7 @@
   "shopping": "Shopping",
   "education": "Education",
   "report": "Report",
+  "reports": "Reports",
   "structure": "Structure",
   "Main products": "Main products",
   "Reactor Factory": "Reactor Factory",
@@ -22,6 +23,13 @@
   "Station News": "Station News",
   "Participate": "Participate",
   "vacanciesDescription": "Here it can be described how necessary it is to recruit good employees to your company, enjoy.",
-  "Apply now": "Apply now"
-
+  "Apply now": "Apply now",
+  "Download": "Download",
+  "files-safety": "Safety files",
+  "files-zach_factory": "ZACH workshop files",
+  "files-electrical_workshop": "Electrical workshop files",
+  "files-turbine_factory": "Turbine workshop files",
+  "files-reactor_factory": "Reactor workshop files",
+  "files-history": "History files",
+  "files-production": "Production files"
 }

@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 
-import { useLocale } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
+import Files from '@/app/[locale]/department/components/Files';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import Slider from '@/app/components/Slider';
 
@@ -22,11 +23,14 @@ const SingleDepartment = ({ department }: ISingleDepartment) => {
   const {
     contentImages1,
     contentImages2,
+    attachedFiles,
     content1,
     content2,
     content3,
     title,
+    slug,
   } = data;
+  const t = useTranslations();
   const slider1 = useMemo(() => {
     if (!contentImages1?.length) {
       return [];
@@ -66,6 +70,16 @@ const SingleDepartment = ({ department }: ISingleDepartment) => {
           className={styles.content}
         />
       </div>
+      {!!attachedFiles?.length && (
+        <>
+          <p className={styles.fileTitle}>{t(`files-${slug}`)}</p>
+          <div className={styles.grid}>
+            {attachedFiles.split(',').map((file) => (
+              <Files file={file} key={file} />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

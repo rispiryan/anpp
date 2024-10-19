@@ -12,6 +12,7 @@
   "shopping": "Покупки",
   "education": "Учебные материалы",
   "report": "Отчет",
+  "reports": "Отчеты",
   "structure": "Структура",
   "Main products": "Основная продукция",
   "Reactor Factory": "Реакторный завод",
@@ -22,6 +23,13 @@
   "Station News": "Новости станции",
   "Participate": "Участвовать",
   "vacanciesDescription": "Здесь можно описать, насколько необходимо набирать в свою компанию хороших сотрудников, наслаждайтесь.",
-  "Apply now": "Подать заявку"
-
+  "Apply now": "Подать заявку",
+  "Download": "Скачать",
+  "files-safety": "Файлы безопасности",
+  "files-zach_factory": "Файлы семинара ZACH",
+  "files-electrical_workshop": "Файлы электротехнической мастерской",
+  "files-turbine_factory": "Файлы турбинного цеха",
+  "files-reactor_factory": "Файлы реакторного цеха",
+  "files-history": "Файлы истории",
+  "files-production": "Файлы производства"
 }

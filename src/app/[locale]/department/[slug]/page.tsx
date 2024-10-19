@@ -25,8 +25,8 @@ export async function generateMetadata({
   }
 
   return {
-    description: data.ar_title,
-    title: data.ar_description,
+    description: data.ar_description,
+    title: data.ar_title,
   };
 }
 

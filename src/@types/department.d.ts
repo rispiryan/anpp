@@ -19,5 +19,6 @@ interface IDepartment {
   ar_title: string;
   en_title: string;
   ru_title: string;
+  slug: string;
   id: number;
 }

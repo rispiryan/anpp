@@ -30,6 +30,7 @@ export default async function Layout({
   children: ReactNode;
 }>) {
   const messages = await getMessages();
+
   return (
     <html lang={locale}>
       <body className={mulish.className}>

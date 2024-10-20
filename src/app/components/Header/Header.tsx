@@ -25,16 +25,17 @@ export const Header = () => {
   }, [pathname]);
 
   return (
-    <div className={cn(styles.header, { [styles.home]: isHome })}>
-      <div className={styles.container}>
-        <Link href={`${routes.home}${locale}`}>
-          <Logo className={styles.logo} alt="Logo" />
-        </Link>
+    isHome !== null && (
+      <div className={cn(styles.header, { [styles.home]: isHome })}>
+        <div className={styles.container}>
+          <Link href={`${routes.home}${locale}`}>
+            <Logo className={styles.logo} alt="Logo" />
+          </Link>
 
-        {isHome !== null && <NavBar isHome={isHome} />}
-
-        {isHome !== null && <LanguageBar isHome={isHome} />}
+          <NavBar isHome={isHome} />
+          <LanguageBar isHome={isHome} />
+        </div>
       </div>
-    </div>
+    )
   );
 };

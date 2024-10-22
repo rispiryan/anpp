@@ -15,7 +15,7 @@ export function Footer() {
       <div className={styles.content}>
         <div className={styles.contacts}>
           <div className={styles.license}>
-            <Contacts />
+            <Contacts className={styles.icon} />
             <p>{t('contact.info', { year: new Date().getFullYear() })} </p>
           </div>
           <Link href={`/${locale}/${routes.contacts}`} className={styles.link}>
@@ -24,7 +24,7 @@ export function Footer() {
         </div>
         <div>
           <p className={styles.address}>{t('contact.address')}</p>
-          <p>{t('contact.contact')}</p>
+          <p>{t('contact.phone')}</p>
         </div>
       </div>
     </div>

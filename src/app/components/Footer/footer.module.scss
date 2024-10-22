@@ -16,6 +16,9 @@
     gap: 8px;
     align-items: center;
     margin-bottom: 12px;
+    .icon{
+      min-width: 20px;
+    }
   }
   .address{
     margin-bottom: 12px;
@@ -23,5 +26,13 @@
   .link{
 
     color: var(--blue)
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-bottom: 30px;
   }
 }

@@ -45,3 +45,15 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 567px) {
+  .breadcrumbs {
+    ol {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .arrow{
+      min-width: 30px;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 .reports{
+  margin-top: 20px;
   .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -10,5 +11,21 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reports {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .reports {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

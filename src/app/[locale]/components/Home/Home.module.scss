@@ -39,6 +39,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
+  padding: 0 20px;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   .newsWrap{
@@ -108,4 +109,41 @@
 }
 .turbineFactory{
   background-image: url("../../../../assets/images/turbineFactory.png");
+}
+
+
+@media screen and (max-width: 768px) {
+  .cover{
+    padding: 20px;
+    margin: 20px;
+    .description{
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .title{
+      font-size: 18px;
+      color: var(--white);
+    }
+  }
+  .wrap{
+    height: 400px;
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .imagesWrap{
+    margin-top: 8px;
+    grid-template-columns: 1fr;
+    .image{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }

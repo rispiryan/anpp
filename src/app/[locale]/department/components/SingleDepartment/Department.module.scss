@@ -16,7 +16,6 @@
 .layoutContent {
   display: flex;
   max-width: 790px;
-  padding: 0 20px;
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
@@ -45,4 +44,17 @@
   justify-content: center;font-size: 24px;
   font-weight: 700;
   margin: 80px 0 32px 0;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }

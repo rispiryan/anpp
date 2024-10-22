@@ -68,10 +68,15 @@ body {
   overflow-x: hidden;
 }
 
+html.overflow-hidden {
+  overflow: hidden;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
   font-weight: 500;
+  overflow-y: auto;
 }
 .MuiPaper-root{
   box-shadow: none!important;

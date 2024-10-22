@@ -9,6 +9,7 @@ import cn from 'classnames';
 
 import LanguageBar from '@/app/components/Header/LanguageBar';
 import NavBar from '@/app/components/Header/NavBar';
+import TopBar from '@/app/components/Header/TopBar';
 
 import { routes } from '@/constants/routes';
 
@@ -29,11 +30,16 @@ export const Header = () => {
       <div className={cn(styles.header, { [styles.home]: isHome })}>
         <div className={styles.container}>
           <Link href={`${routes.home}${locale}`}>
-            <Logo className={styles.logo} alt="Logo" />
+            <div className={styles.logo}>
+              <Logo alt="Logo" />
+            </div>
           </Link>
 
           <NavBar isHome={isHome} />
-          <LanguageBar isHome={isHome} />
+          <div className={styles.wrap}>
+            <LanguageBar isHome={isHome} />
+            <TopBar isHome={isHome} />
+          </div>
         </div>
       </div>
     )

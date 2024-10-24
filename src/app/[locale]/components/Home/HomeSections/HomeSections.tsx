@@ -27,24 +27,24 @@ const HomeSections = () => {
   const sectionsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.addEventListener('scroll', () => {
-      if (sectionsRef.current) {
-        const docScrollTop = document.documentElement.scrollTop;
-        const docScrollHeight =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
+    if (document.documentElement.clientWidth > 769) {
+      document.body.addEventListener('scroll', () => {
+        if (sectionsRef.current) {
+          const docScrollTop = document.body.scrollTop;
+          const docScrollHeight =
+            document.body.scrollHeight - document.body.clientHeight;
+          // Get the custom div scroll information
+          const customDivScrollHeight =
+            sectionsRef.current.scrollHeight - sectionsRef.current.clientHeight;
 
-        // Get the custom div scroll information
-        const customDivScrollHeight =
-          sectionsRef.current.scrollHeight - sectionsRef.current.clientHeight;
+          // Calculate the scroll ratio
+          const scrollRatio = docScrollTop / docScrollHeight;
 
-        // Calculate the scroll ratio
-        const scrollRatio = docScrollTop / docScrollHeight;
-
-        // Apply the same scroll ratio to the custom div
-        sectionsRef.current.scrollTop = scrollRatio * customDivScrollHeight;
-      }
-    });
+          // Apply the same scroll ratio to the custom div
+          sectionsRef.current.scrollTop = scrollRatio * customDivScrollHeight;
+        }
+      });
+    }
   }, []);
 
   return (

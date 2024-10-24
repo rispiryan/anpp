@@ -2,11 +2,8 @@
 .main {
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-.main > main {
-    min-height: calc(100vh - 80px);
+    position: relative;
+    /*min-height: 100dvh;*/
 }
 
 .content {
@@ -14,6 +11,4 @@
     width: 100%;
     margin: 0 auto 20px auto;
     flex-direction: column;
-    min-height: calc(100vh - 95px - 128px);
-    height: 100%;
 }

@@ -8,58 +8,64 @@
     max-width: 50%;
     max-height: 100%;
     overflow: hidden;
-
+    min-height: calc(100% + 50px);
     .image{
         width: 305px;
         height: 240px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
 .safety{
-    background-image: url("../../../../../assets/images/safety.png");
+    background-image: url("../../../../../assets/images/safety.jpg");
 }
 .vacancies{
-    background-image: url("../../../../../assets/images/vacancies.png");
+    background-image: url("../../../../../assets/images/vacancies.jpg");
 }
 .production{
-    background-image: url("../../../../../assets/images/production.png");
+    background-image: url("../../../../../assets/images/production.jpg");
 }
 
 .electricalWorkshop{
-    background-image: url("../../../../../assets/images/electricalWorkshop.png");
+    background-image: url("../../../../../assets/images/electricalWorkshop.jpg");
 }
 
 .structure{
-    background-image: url("../../../../../assets/images/structure.png");
+    background-image: url("../../../../../assets/images/structure.jpg");
 }
 .cooperation{
-    background-image: url("../../../../../assets/images/cooperation.png");
+    background-image: url("../../../../../assets/images/cooperation.jpg");
 }
 .report{
-    background-image: url("../../../../../assets/images/report.png");
+    background-image: url("../../../../../assets/images/report.jpg");
 }
 .events{
-    background-image: url("../../../../../assets/images/events.png");
+    background-image: url("../../../../../assets/images/events.jpg");
 }
 .history{
-    background-image: url("../../../../../assets/images/history.png");
+    background-image: url("../../../../../assets/images/history.jpg");
 }
 .zachFactory{
-    background-image: url("../../../../../assets/images/zachFactory.png");
+    background-image: url("../../../../../assets/images/zachFactory.jpg");
 }
 .reactorFactory{
-    background-image: url("../../../../../assets/images/reactorFactory.png");
+    background-image: url("../../../../../assets/images/reactorFactory.jpg");
 }
 .turbineFactory{
-    background-image: url("../../../../../assets/images/turbineFactory.png");
+    background-image: url("../../../../../assets/images/turbineFactory.jpg");
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     .imagesWrap{
         margin-top: 8px;
         grid-template-columns: 1fr;
         width: 50%;
+        top: -250px;
+        min-height: calc(100% + 250px);
+
         .image{
             width: 100%;
             object-fit: cover;

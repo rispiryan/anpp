@@ -1,0 +1,88 @@
+.imagesWrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    top: -50px;
+    position: absolute;
+    right: 0;
+    max-width: 50%;
+    max-height: 100%;
+    overflow: hidden;
+
+    .image{
+        width: 305px;
+        height: 240px;
+    }
+}
+
+.safety{
+    background-image: url("../../../../../assets/images/safety.png");
+}
+.vacancies{
+    background-image: url("../../../../../assets/images/vacancies.png");
+}
+.production{
+    background-image: url("../../../../../assets/images/production.png");
+}
+
+.electricalWorkshop{
+    background-image: url("../../../../../assets/images/electricalWorkshop.png");
+}
+
+.structure{
+    background-image: url("../../../../../assets/images/structure.png");
+}
+.cooperation{
+    background-image: url("../../../../../assets/images/cooperation.png");
+}
+.report{
+    background-image: url("../../../../../assets/images/report.png");
+}
+.events{
+    background-image: url("../../../../../assets/images/events.png");
+}
+.history{
+    background-image: url("../../../../../assets/images/history.png");
+}
+.zachFactory{
+    background-image: url("../../../../../assets/images/zachFactory.png");
+}
+.reactorFactory{
+    background-image: url("../../../../../assets/images/reactorFactory.png");
+}
+.turbineFactory{
+    background-image: url("../../../../../assets/images/turbineFactory.png");
+}
+
+
+@media screen and (max-width: 1200px) {
+    .imagesWrap{
+        margin-top: 8px;
+        grid-template-columns: 1fr;
+        width: 50%;
+        .image{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imagesWrap{
+        margin-top: 8px;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        position: initial;
+        .image{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
